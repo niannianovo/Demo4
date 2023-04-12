@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link th:href="@{/static/css/register.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="register">
+    <h1>用户注册</h1>
+    <form th:action="@{/User/Register}" method="post">
+        <div th:text="${msg}" id="msg"></div>
+        <label for="username">用户名：</label>
+        <input type="text" name="username" id="username" th:value="${username}"><br>
+        <label for="password">密&emsp;码：</label>
+        <input type="password" name="password" id="password" th:value="${password}"><br>
+        <input type="submit" id="submit" value="注册">
+    </form>
+</div>
+</body>
+</html>
